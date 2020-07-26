@@ -1,0 +1,923 @@
+@charset "utf-8";
+
+html,
+body {}
+
+.tabs li.active a,
+.tabs li a:hover {
+  opacity: 1;
+  top: 0;
+}
+ 
+.tabs-content {
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  border-radius: 0 4px 4px 4px;
+  background: #000;
+}
+ 
+.tabs-panel {
+  display: none;
+}
+ 
+.tabs-panel.active {
+  display: block;
+}
+
+.wrap {
+    position: relative;
+    background: rgba(0,0,0,0.0);
+}
+.g-cont {
+    background: #eee;
+    padding-bottom: 100px;
+}
+.c-top-arrow {
+    background-image: url(https://freefiremobile-a.akamaihd.net/common/web_event/official/top_arrow2.png);
+}
+.g-top {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    -webkit-filter: blur(2px);
+    /* Chrome, Opera */
+    filter: blur(2px);
+    background: url(http://freefiremobile-a.akamaihd.net/ffwebsite/images/weapon/top_bg.jpg) top center no-repeat;
+}
+
+.g-top.bg_ani_move {
+    -webkit-animation: bg_move 1s linear 0s both;
+    -o-animation: bg_move 1s linear 0s both;
+    animation: bg_move 1s linear 0s both;
+}
+
+@-webkit-keyframes bg_move {
+    to {
+        background-position: 50% bottom;
+        -webkit-filter: blur(0);
+    }
+}
+
+@keyframes bg_move {
+    to {
+        background-position: 50% bottom;
+        filter: blur(0);
+    }
+}
+
+.m-news-slogan {
+    width: 465px;
+    left: 50%;
+    position: relative;
+    margin-left: -620px;
+    top: 110px;
+}
+
+.g-weapon {
+    /*padding-top: 30px;*/
+}
+
+.m-weapon-tab-up {
+    padding: 0 50px;
+    background: rgba(0,0,0,0.1);
+    height: 40px;
+}
+
+.m-weapon-tab-upList {
+    width: 100%;
+    max-width: 1720px;
+    margin: 0 auto;
+    font-size: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.m-weapon-tab-upList li {
+    display: inline-block;
+	border-left:2px solid #feab02;
+    vertical-align: top;
+    font-size: 12px;
+    color: #000;
+    padding: 2px 10px 0;
+    width: 33.3%;
+    text-align: center;
+    cursor: pointer;
+}
+.m-weapon-tab-upList li .imgBox {
+    width: 80px;
+    margin: 0 auto;
+}
+.m-weapon-tab-upList li .imgBox img {
+    vertical-align: top;
+    width: 100%;
+}
+.m-weapon-tab-upList li .imgBox img.hover{
+    display: none;
+}
+.m-weapon-tab-upList li .txt{
+    display: block;
+    padding-top: 8px;
+    font-size: 15px;
+    line-height: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+    transition:all 0.5s ease 0s;
+}
+.m-weapon-tab-upList li .txt:after {
+    content: "";
+    height: 5px;
+    width: 0;
+    background: #feab02;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.m-weapon-tab-upList li:hover .txt:after,
+.m-weapon-tab-upList li.active .txt:after {
+    width: 100%;
+}
+.m-weapon-tab-upList li.active .imgBox img.hover,
+.m-weapon-tab-upList li:hover .imgBox img.hover{
+    display: block;
+}
+.m-weapon-tab-upList li.active .imgBox img.normal,
+.m-weapon-tab-upList li:hover .imgBox img.normal{
+    display: none;
+}
+.m-weapon-tab-upList li:hover .txt,
+.m-weapon-tab-upList li.active .txt {
+    /*border-bottom: 5px solid #ec9d20;*/
+    color: #feab02;
+}
+
+
+.m-weapon-tab-down {
+    background: #333;
+    height: 50px;
+    padding: 0 50px;
+}
+
+.m-weapon-tab-downList {
+    width: 100%;
+    max-width: 1720px;
+    margin: 0 auto;
+    height: 50px;
+    font-size: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.m-weapon-tab-downList li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 14px;
+    line-height: 50px;
+    color: #fffefe;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.m-weapon-tab-downList li span {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 8px;
+    position: relative;
+}
+
+.m-weapon-tab-downList li span:after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #eee;
+    transition: height 0.5s ease 0s;
+    position: absolute;
+    z-index: 1;
+}
+
+.m-weapon-tab-downList li.active span:after,.m-weapon-tab-downList li:hover span:after {
+    height: 5px;
+}
+
+
+
+
+/* weapon cont */
+
+.m-weapon-wrap {
+    background: #fff;
+    padding: 22px;
+    max-width: 530px;
+    margin: 0 auto;
+}
+
+.m-weapon-wrap h4 {
+    line-height: 36px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.m-weapon-wrap h4 .m-bullet {
+    float: right;
+    font-size: 18px;
+    color: #000;
+}
+
+.m-bullet .u-bullet {
+    height: 34px;
+    width: 20px;
+    margin-right: 5px;
+    vertical-align: top;
+    display: inline-block;
+    background: url(http://freefiremobile-a.akamaihd.net/ffwebsite/images/weapon/bullet.png) 50% 50% no-repeat;
+}
+
+.m-weapon-gun {
+    width: 100%;
+}
+
+.m-weapon-gun img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.m-title-label {
+    line-height: 24px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 6px;
+    padding-right: 2px;
+    margin-right: 4px;
+}
+
+.m-title-label span {
+    vertical-align: top;
+    display: inline-block;
+    color: #fff;
+    padding: 0 7px 0 11px;
+    position: relative;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: #ff5448;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.m-title-label span:after {
+    content: "";
+    right: -8px;
+    top: 0px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-left: 8px solid #ff5448;
+    border-bottom: 12px solid transparent;
+}
+
+.m-weapon-detail-wrap {
+    width: 100%;
+    font-size: 0px;
+}
+
+.m-weapon-detail {
+    padding-top: 20px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.m-weapon-detail>li {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 24px;
+    color: #000;
+    font-weight: bold;
+    font-size: 0;
+    text-transform: uppercase;
+}
+
+.m-weapon-detail>li .left {
+    width: 50%;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.m-weapon-detail>li i {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 24px;
+    background: url(http://freefiremobile-a.akamaihd.net/ffwebsite/images/weapon/star.png) 0 0 no-repeat;
+}
+
+.m-weapon-detail>li i.half {
+    background-position: -20px 0;
+}
+
+.m-weapon-detail>li i.white {
+    background-position: -40px 0;
+}
+
+.m-weapon-detail>li i.orange {
+    background-position: 0px -24px;
+}
+
+.m-weapon-config {
+    width: 100%;
+    vertical-align: top;
+    font-size: 0px;
+    display: inline-block;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    /*padding-bottom: 20px;*/
+    padding: 20px 0 0 0;
+}
+
+.m-weapon-config li {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    line-height: 20px;
+    width: 74px;
+    font-size: 14px;
+    color: #666666;
+    margin: 0 10px;
+    min-height: 108px;
+}
+
+.m-weapon-config li a {
+    color: #666666;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    min-height: 108px;
+    text-transform: uppercase;
+}
+
+.m-weapon-config.empty li .img {
+    background: none;
+}
+
+.m-weapon-config li .img {
+    width: 68px;
+    height: 68px;
+    border-radius: 5px;
+    background: #eee;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.m-weapon-config li .img img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.m-weapon-txt {
+    font-size: 14px;
+    line-height: 60px;
+    color: #666;
+    height: 66px;
+    padding-bottom: 6px;
+}
+
+.m-weapon-txt span {
+    vertical-align: middle;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+    word-break: break-word;
+}
+
+.m-weapon-label {
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.m-weapon-label span {
+    display: inline-block;
+    line-height: 26px;
+    height: 26px;
+    padding: 0 6px;
+    background: #66c056;
+    border-radius: 4px;
+    vertical-align: top;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/*swiper*/
+
+.m-weapon-item-box {
+    border-bottom: 1px solid #eee;
+    padding: 14px 20px 16px;
+    position: relative;
+}
+
+.m-weapon-item {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 370px;
+    position: relative;
+    height: 40px;
+}
+
+.m-weapon-item-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 1px 0;
+    position: relative;
+}
+
+.m-weapon-item-list {
+    height: 38px;
+    font-size: 0;
+    position: relative;
+    left: 0;
+    white-space: nowrap;
+    transition:all 0.5s ease 0s;
+}
+
+.m-weapon-item-list>li {
+    margin: 0 5px;
+    width: 113px;
+    height: 38px;
+    border: 3px solid transparent;
+    vertical-align: top;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.m-weapon-item-list>li.active {
+    border: 3px solid #eee;
+}
+
+.m-weapon-item-list>li.active img {
+    border-left: 4px solid #fcc801;
+}
+
+.m-weapon-item-list>li img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    border-left: 4px solid transparent;
+    vertical-align: top;
+}
+
+.m-weapon-item .u-arrow {
+    background-image: url(https://freefiremobile-a.akamaihd.net/common/web_event/official/weapon_arrow.png);
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+}
+
+.m-weapon-item .u-arrow.left {
+    background-position: 0 -40px;
+    left: -30px;
+}
+
+.m-weapon-item .u-arrow.left.disabled,
+.m-weapon-item .u-arrow.left.disabled:hover {
+    background-position: 0 -80px;
+    cursor: default;
+}
+
+.m-weapon-item .u-arrow.left:hover {
+    background-position: 0 0;
+}
+
+.m-weapon-item .u-arrow.right {
+    background-position: -20px -40px;
+    right: -30px;
+}
+
+.m-weapon-item .u-arrow.right.disabled,
+.m-weapon-item .u-arrow.right.disabled:hover {
+    background-position: -20px -80px;
+    cursor: default;
+}
+
+.m-weapon-item .u-arrow.right:hover {
+    background-position: -20px 0;
+}
+
+
+
+
+
+/*data*/
+
+.m-weapon-data {
+    padding: 0 0 20px;
+    font-size: 0;
+}
+
+.m-weapon-data>li {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 10px 0;
+}
+
+.m-weapon-data>li .txt {
+    font-size: 12px;
+    line-height: 16px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.m-weapon-data>li .m-weapon-line {
+    position: relative;
+    line-height: 16px;
+    padding: 5px 34px 0 0;
+}
+
+.m-weapon-line .u-line {
+    height: 6px;
+    border-radius: 3px;
+    background: #f4f4f4;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.m-weapon-line .u-line i {
+    background: #4aa757;
+    background: -webkit-linear-gradient(left, #1b7d5a, #65bf56);
+    background: linear-gradient(left, #1b7d5a, #65bf56);
+    height: 6px;
+    border-radius: 3px;
+    display: block;
+}
+
+.m-weapon-line .num {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 16px;
+    border-radius: 3px;
+    line-height: 16px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    min-width: 24px;
+    background: #66c056;
+}
+
+li.orange .m-weapon-line .u-line i {
+    background: #fb970f;
+    background: -webkit-linear-gradient(left, #fa631e, #fcc801);
+    background: linear-gradient(left, #fa631e, #fcc801);
+}
+
+li.orange .m-weapon-line .num {
+    background: #fcc801;
+}
+
+
+
+/* hint module 20180325 */
+
+.u-hint-icon {
+    width: 14px;
+    height: 12px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    z-index: 9;
+    background: url(https://freefiremobile-a.akamaihd.net/common/web_event/official/hint.png) 0 0 no-repeat;
+}
+
+.u-hint-txt {
+    color: #666;
+    font-size: 12px;
+    width: 210px;
+    position: absolute;
+    left: 50%;
+    margin-left: -105px;
+    bottom: 116px;
+    line-height: 18px;
+    text-align: center;
+    display: none;
+}
+
+.u-hint-txt span {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0 10px;
+    border: 1px solid #969696;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(#fff, #eaebf4);
+    background: linear-gradient(#fff, #eaebf4);
+    box-shadow: 0 3px 5px #bbb;
+}
+
+.m-weapon-config li a:hover .u-hint-txt {
+    display: block;
+}
+
+.m-module-line {
+    width: 100%;
+    overflow: hidden;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.m-module-line span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 10px;
+    color: #777;
+    text-transform: uppercase;
+    height: 15px;
+    padding: 0 8px;
+    position: relative;
+}
+
+.m-module-line span:before {
+    content: "";
+    border-top: 1px solid #eee;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    right: 100%;
+    top: 7px;
+}
+
+.m-module-line span:after {
+    content: "";
+    border-top: 1px solid #eee;
+    display: block;
+    width: 1000px;
+    position: absolute;
+    left: 100%;
+    top: 7px;
+}
+
+/*goTop*/
+
+.m-goTop {
+    display: none;
+    width: 40px;
+    height: 45px;
+    position: fixed;
+    right: -1px;
+    bottom: 150px;
+    z-index: 996;
+    background: #fff;
+    border: 1px solid #dddddd;
+    box-shadow: -6px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.m-goTop span {
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    margin: 17px auto 0;
+    transform: -webkit-rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.c-3x-list>li {
+    transition:all 0.5s ease 0s;
+}
+
+.c-3x-list>li.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transform:scale(0);
+    position: absolute;
+}
+
+/* media query */
+
+@media only screen and (max-width:1680px) and (min-width:1440px) {
+
+
+
+    .m-weapon-wrap {
+        padding: 22px 10px;
+    }
+}
+
+@media only screen and (max-width:1440px) {
+    .c-3x-list>li {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:1250px) {
+    .m-news-more {
+        width: 500px;
+    }
+
+    .m-news-slogan {
+        width: 465px;
+        left: 0;
+        position: relative;
+        margin-left: 20px;
+        top: 100px;
+    }
+    .m-weapon-tab-up,
+    .m-weapon-tab-down {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width:1250px) and (min-width:900px) {
+
+
+    .m-weapon-wrap {
+        padding: 22px 10px;
+    }
+
+    .c-3x-list>li {
+        padding: 30px 10px;
+    }
+}
+
+
+
+/* ipad  */
+
+@media only screen and (max-width:1024px) {
+
+    .m-weapon-tab-downList::-webkit-scrollbar,
+    .m-weapon-tab-upList::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    .m-weapon-tab-upList,
+    .m-weapon-tab-downList{
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        transition:none;
+    }
+    .m-goTop.show {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    .c-3x-list>li {
+        width: 100%;
+        padding: 30px 10px;
+    }
+    .m-weapon-config li {
+        min-height: auto;
+        padding-bottom: 10px;
+    }
+    .m-weapon-txt {
+        height: auto;
+        line-height: auto;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .g-top {
+        display: none;
+    }
+
+    .g-detail .c-h2 {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .g-weapon {
+        padding-top: 60px;
+    }
+    .g-cont {
+        padding: 40px 0 100px;
+    }
+}
+
+
+
+/* iphone  */
+
+@media only screen and (max-width:640px) {
+    .g-detail {
+        padding: 20px;
+    }
+
+    .m-news-detail {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .m-weapon-config li a {
+        font-size: 12px;
+    }
+    .m-weapon-item-box {
+        padding: 14px 0 16px;
+    }
+    .m-weapon-item .u-arrow {
+        display: none;
+    }
+    .m-weapon-item {
+        max-width: none;
+    }
+    .m-weapon-config li {
+        width: 92px;
+        margin: 0;
+    }
+    .m-weapon-wrap h4 {
+        font-size: 24px;
+    }
+    .m-weapon-data>li {
+        padding: 10px 5px 0;
+    }.m-weapon-item-list::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    .m-weapon-item-list {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        transition:none;
+    }
+}
+
+@media only screen and (max-width:570px) {
+
+    .m-weapon-wrap {
+        padding: 22px 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+
+    .m-weapon-detail>li {
+        width: 100%;
+    }
+
+    .m-weapon-wrap {
+        padding: 22px;
+    }
+    .m-weapon-detail {
+        padding-top: 10px;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .m-weapon-config {
+        width: 100%;
+        padding: 20px 0 10px;
+    }
+}
+
+
+
+/* ipone6 plus */
+
+@media only screen and (max-width:410px) {
+    .m-weapon-config {
+        width: 110%;
+        margin-left: -5%;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .m-weapon-wrap h4 {
+        font-size: 20px;
+    }
+    .m-weapon-data>li {
+        width: 100%;
+    }
+}
+
+:lang(ar) .g-weapon{
+    direction: rtl;
+}

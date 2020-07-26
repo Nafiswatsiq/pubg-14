@@ -1,0 +1,141 @@
+
+.header-menu-box {
+    background-image: url(../img/blue-tile.png);
+    background-color: #0d1321;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #eaa300;
+}
+
+.header-menu-list-more {
+    width: 30%;
+    color: #eaa300;
+    margin: 30px;
+    margin-top: 3%;
+    margin-left:px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: 2px solid #eaa300;
+    display: inline-block;
+}
+
+.notify {
+    background-image: url(../img/blue-tile.png);
+    background-color: #0d1321;
+    width: 91.5%;
+    height: auto;
+    margin: 12px;
+    margin-bottom: 10px;
+    padding: 7px;
+    color: #eaa300;
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid #eaa300;
+    border-left: 5px solid #eaa300;
+}
+.notify i {
+    color: #eaa300;
+    font-size: 25px;
+    margin-top: 0px;
+    float: right;
+}
+.notify2 {
+    background-image: url(../img/blue-tile.png);
+    background-color: #0d1321;
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+	margin-left: 0px;
+    margin-bottom: 10px;
+    padding: 7px;
+    color: #eaa300;
+    font-size: 13px;
+    text-align: left;
+    border: 1px solid #eaa300;
+    border-left: 5px solid #eaa300;
+}
+.popup {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:9999;
+	background-color:rgba(0, 0, 0, 0.4);
+}
+.popup-box {
+    background-image: url(../img/blue-tile.png);
+    background-color: #0d1321;
+	position: relative;
+	margin: 0px auto;
+	margin-top: 30%;
+	margin-bottom: 10%;
+	width: 354px;
+	height: auto;
+	color: #eaa300;
+	text-align: left;
+	border: 1px solid #eaa300;
+    border-radius: 10px;
+}
+.btn-login {
+    background-image: url(../img/blue-tile.png);
+    background-color: #0d1321;
+	width: 90%;
+	height: 43px;
+	margin-bottom: 10px;
+	color: #fff;
+	border: 1px solid #eaa300;
+	display: inline-block;
+}
+.btn-login .bungkusan-konten {
+	height: 100%;
+	width: 100%;
+}
+.btn-login img {
+	width: 18px;
+	height: 18px;
+	float: left;
+}
+.btn-login .bungkusan-logo {
+	background: #eaa300;
+	width: 48px;
+	height: 100%;
+	padding: 14px;
+	padding-top: 11px;
+	border-radius: 1px;
+	display: inline-block;
+	float: left;
+}
+.btn-login .bungkusan-teks {
+    width: 180px;
+    color: #eaa300;
+    font-family: Teko;
+	line-height: 42px;
+	vertical-align: top;
+	text-align:center;
+	border: none;
+	display: inline-block;
+}
+.btn-back {
+    background: none;
+    width: 30%;
+    height: auto;
+    margin: 5%;
+    padding: 5px;
+    color: #eaa300;
+    font-family: 'Teko', sans-serif;
+    text-transform: uppercase;
+    border: 1px solid #eaa300;
+    border-radius: 5px;
+    outline: none;
+    display: inline-block;
+}
+
+	.header-menu-list-more {
+        margin-top: 3.5%;
+    }
